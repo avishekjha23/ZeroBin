@@ -1,0 +1,313 @@
+/* Modern Complaints Table CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  
+  .header {
+    position: relative;
+    text-align: center;
+    background: linear-gradient(60deg, rgba(84, 58, 183, 1) 0%, rgba(0, 172, 193, 1) 100%);
+    color: white;
+    min-height: 100vh;
+    width: 100vw;
+  }
+  
+  
+  .preview-container {
+    width: 90%;
+    max-width: 1200px;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    display: flex;
+    flex-direction: column;
+    
+    /* Center both horizontally and vertically */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 90%); /* Correcting vertical centering */
+    z-index: 30;
+    margin: 0;
+  }
+  
+  
+  .preview-container h2 {
+    color: #333;
+    font-size: 1.4rem;
+    font-weight: 600;
+    padding: 15px 0px;
+    margin: 0;
+  }
+  
+  .table-container {
+    max-height: 530px; /* This height accommodates approximately 5 rows */
+    overflow-y: auto;
+    overflow-x: auto;
+    padding: 0;
+    margin: 0px 10px 20px;
+    scrollbar-width: thin;
+    scrollbar-color: #ccc transparent;
+  }
+  
+  .table-container::-webkit-scrollbar {
+    height: 6px;
+    width: 6px;
+  }
+  
+  .table-container::-webkit-scrollbar-thumb {
+    background-color: #ccc;
+    border-radius: 3px;
+  }
+  
+  .complaints-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    background: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.03);
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  
+  
+  .complaints-table th,
+  .complaints-table td {
+    padding: 15px 20px;
+    text-align: left;
+    border-bottom: 1px solid #f0f0f0;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    vertical-align: middle;
+  }
+  
+  .complaints-table th {
+    background-color: #f8f9fa;
+    color: #444;
+    font-weight: 600;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+  }
+  
+  .complaints-table tr {
+    transition: background-color 0.2s;
+  }
+  
+  .complaints-table tr:hover {
+    background-color: #f6f6ff;
+  }
+  
+  .complaints-table td {
+    color: #333;
+    font-size: 14px;
+  }
+  
+  /* Styling for the Type of Waste column */
+  .complaints-table td:nth-child(4) {
+    font-weight: 500;
+  }
+  
+  .complaints-table td:nth-child(4):contains("Organic") {
+    color: #27ae60;
+  }
+  
+  .complaints-table td:nth-child(4):contains("Inorganic") {
+    color: #3498db;
+  }
+  
+  .complaints-table td:nth-child(4):contains("Metallic") {
+    color: #8e44ad;
+  }
+  
+  /* Location column styling */
+  .complaints-table td:nth-child(5) {
+    font-weight: 500;
+  }
+  
+  /* View button styling */
+  .complaints-table td a {
+    display: inline-flex;
+    justify-content: center; 
+    align-items: center;
+    padding: 6px 12px;
+    border-radius: 4px;
+    background-color: #f0f0ff;
+    color: #6665ee;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.2s;
+  }
+  
+  .complaints-table td a:hover {
+    background-color: #e0e0ff;
+    color: #5453d4;
+  }
+  
+  /* Edit and Delete buttons */
+  .edit-btn, .delete-btn {
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-size: 13px;
+    cursor: pointer;
+    transition: all 0.2s;
+    border: none;
+    margin-right: 6px;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+  }
+  
+  .edit-btn {
+    background-color: #fff8e0;
+    color: #f39c12;
+  }
+  
+  .edit-btn:hover {
+    background-color: #fef2d0;
+  }
+  
+  .delete-btn {
+    background-color: #ffeeee;
+    color: #e74c3c;
+  }
+  
+  .delete-btn:hover {
+    background-color: #ffe0e0;
+  }
+  
+  /* Make sure images within the table look good */
+  .complaints-table td img {
+    max-height: 30px;
+    vertical-align: middle;
+  }
+  
+  /* Add some nice styling to the operations column */
+  .complaints-table td:last-child {
+    text-align: right;
+    white-space: nowrap;
+  }
+  
+  /* Add a nice wrapper for the name and contact info */
+  .complaints-table td:nth-child(3) {
+    line-height: 1.4;
+  }
+  
+  /* For mobile responsiveness */
+  @media (max-width: 768px) {
+    .preview-container {
+      border-radius: 8px;
+      padding: 10px;
+    }
+    
+    .preview-container h2 {
+      font-size: 1.5rem;
+      padding: 15px;
+    }
+    
+    .complaints-table {
+      font-size: 13px;
+    }
+    
+    .complaints-table th,
+    .complaints-table td {
+      padding: 12px 10px;
+    }
+    
+    .edit-btn, .delete-btn {
+      padding: 4px 8px;
+      font-size: 12px;
+    }
+  }
+  
+  
+  /* Waves Animation */
+  .waves {
+    width: 100%;
+    top: 420px;
+  }
+  
+  .parallax > use {
+    animation: move-forever 25s cubic-bezier(.55, .5, .45, .5) infinite;
+  }
+  
+  .parallax > use:nth-child(1) {
+    animation-delay: -2s;
+    animation-duration: 7s;
+  }
+  
+  .parallax > use:nth-child(2) {
+    animation-delay: -3s;
+    animation-duration: 10s;
+  }
+  
+  .parallax > use:nth-child(3) {
+    animation-delay: -4s;
+    animation-duration: 13s;
+  }
+  
+  .parallax > use:nth-child(4) {
+    animation-delay: -5s;
+    animation-duration: 20s;
+  }
+  
+  @keyframes move-forever {
+    0% {
+      transform: translate3d(-90px, 0, 0);
+    }
+    100% {
+      transform: translate3d(85px, 0, 0);
+    }
+  }
+  
+  /* Footer Content Section */
+  .content {
+    position: relative;
+    bottom: -446px;
+    height: 17.2vh;
+    padding-top: 20px;
+    text-align: center;
+    background-color: white;
+  }
+  
+  .content p {
+    font-family: 'Lato', sans-serif;
+    letter-spacing: 1px;
+    font-size: 14px;
+    color: #333333;
+    padding: 0px 0px 10px 0px;
+  }
+  
+  .content a {
+    color: #6665ee;
+    text-decoration: none;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .waves {
+      height: 40px;
+      min-height: 40px;
+    }
+    
+    .content {
+      height: 30vh;
+    }
+  }
+  

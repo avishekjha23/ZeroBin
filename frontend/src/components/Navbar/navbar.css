@@ -1,0 +1,94 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #3a5785;
+    color: white;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-sizing: border-box;
+    justify-content: flex-start;
+  }
+  
+  .logo a {
+    color: white;
+    font-family: 'Jost', sans-serif;
+    text-decoration: none;
+    font-size: 33px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin-left: 2.9rem;
+  }
+
+  .logo-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+  }
+  
+  .logo-img {
+    height: 40px;
+    width: auto;
+  }
+  
+  .nav-links {
+    display: flex;
+    list-style: none;
+    margin-left: 42rem;
+  }
+  
+  .nav-links li {
+    margin-left: 1.5rem;
+    transform: translate(176px, 10px);
+  }
+  
+  .nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: 0.3s;
+  }
+  
+  .nav-links a:hover {
+    opacity: 0.8;
+  }
+  
+  .fa {
+    margin-right: 5px;
+  }
+
+  .log-btn {
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    margin-top: -5px;
+    gap: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Light Blue for Login */
+  .log-btn.login {
+    background-color: #66ccff;
+  }
+  
+  /* Deep Blue for Logout */
+  .log-btn.logout {
+    background-color: #003366;
+  }
+  

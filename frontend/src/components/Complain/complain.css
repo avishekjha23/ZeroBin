@@ -1,0 +1,131 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  width: 100%;
+}
+
+.complain-wrapper {
+    position: relative;
+    top: 40%;
+    bottom: 20%;
+    left: 50%;
+    transform: translate3d(-50%, 60%, 0);
+    padding: 20px;
+    width: 80vw;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  
+  .complain-card {
+    width: 100%;
+    max-width: 700px;
+    background: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  .complain-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  
+  .complain-group input,
+  .complain-group select,
+  .complain-group textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    background-color: #f4f4f4;
+    color: #000;
+  }
+
+  .complain-group input[type="file"]::-webkit-file-upload-button {
+  background-color: #e0e0e0;
+  color: #333;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+
+
+  .complain-group textarea {
+    resize: vertical;
+    min-height: 80px;
+  }
+  
+  .complain-button {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .complain-button:hover {
+    background-color: #0056b3;
+  }
+  
+  .category-checks {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  
+  .checkbox-label {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    padding: 5px 5px;
+    border-radius: 6px;
+  }
+  
+  /* Checkbox input styling */
+  .checkbox-label input[type="checkbox"] {
+    appearance: none;
+    border-radius: 3px;
+    cursor: pointer;
+    position: relative;
+  }
+  
+
+  .checkbox-label input[type="checkbox"]:checked::after {
+    content: "";
+    position: absolute;
+    top: 3px;
+    left: 8px;
+    width: 5px;
+    height: 12px;
+    border: solid #000000;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+  }
+  
+  
+  .form-title {
+    text-align: center;
+    color: black;
+  }
+  
