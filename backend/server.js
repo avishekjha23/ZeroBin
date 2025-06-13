@@ -3,11 +3,19 @@ const cors = require('cors');
 const dotenv = require('dotenv');
 const connectDB = require('./config/db');
 const multer = require('multer'); // Import multer
+const fs = require('fs');
+if (!fs.existsSync('uploads')) {
+  fs.mkdirSync('uploads');
+}
 
 dotenv.config();
 connectDB();
 
 const app = express();
+
+app.get('/', (req, res) => {
+  res.send('API is running');
+});
 
 // Middlewares
 app.use(cors({ origin: process.env.FRONTEND_URL, credentials: true }));
@@ -48,7 +56,10 @@ app.post('/api/complaints', upload.single('picture'), async (req, res) => {
 
     await newComplaint.save();
 
-    res.status(200).json({ message: 'Complaint Registered Successfully!' });
+    res.status(200).json({
+  message: 'Complaint Registered Successfully!',
+  imageUrl: `${req.protocol}://${req.get('host')}/${picture}`
+});
   } catch (error) {
     console.error('Error while saving complaint:', error);
     res.status(500).json({ error: 'Failed to register complaint.' });
