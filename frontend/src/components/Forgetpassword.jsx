@@ -19,7 +19,7 @@ const ForgetPassword = () => {
 
     try {
 
-      await axios.post('http://localhost:4001/api/auth/forgetpassword', { email });
+      await axios.post(`${process.env.REACT_APP_API_URL}/api/auth/forgetpassword`, { email });
       setMessage('Password reset link sent to your email.');
       setError('');
       setEmail('');
