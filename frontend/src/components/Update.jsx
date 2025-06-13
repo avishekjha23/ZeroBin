@@ -20,7 +20,7 @@ const Update = () => {
 
   useEffect(() => {
     fetch(`${process.env.REACT_APP_API_URL}/complaints/${id}`)
-      .then((res) => res.json());
+      .then((res) => res.json())
       .then((data) => {
         setFormData({
           ...data,
