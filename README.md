@@ -1,4 +1,7 @@
 # ZeroBin <img src="/frontend/src/assets/trash-bin.png" width="48" height="48">
+
+[https://zerobin.netlify.app/]
+
 ZeroBin is a full-stack web application designed to streamline waste management by allowing users to register complaints with geolocation, waste type, and image uploads. It features separate dashboards for users and admins, offering real-time complaint tracking and efficient resolution workflows.
 
 ---
