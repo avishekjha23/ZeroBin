@@ -17,7 +17,7 @@ const PreviewComplain = () => {
         const email = currentUser?.email;
         
         // First fetch all complaints
-        const response = await fetch('http://localhost:4001/api/complaints');
+        const response = await fetch(`${process.env.REACT_APP_API_URL}/api/complaints`);
         const data = await response.json();
         console.log('All fetched complaints:', data);
         
@@ -43,7 +43,7 @@ const PreviewComplain = () => {
   const handleDelete = async (id) => {
     if (window.confirm('Are you sure you want to delete this complaint?')) {
       try {
-        await fetch(`http://localhost:4001/api/complaints/${id}`, {
+        await fetch(`${process.env.REACT_APP_API_URL}/api/complaints/${id}`, {
           method: 'DELETE',
         });
         setComplaints(complaints.filter((c) => c._id !== id));
