@@ -24,7 +24,7 @@ const LoginForm = () => {
     }
 
     try {
-      const res = await axios.post('http://localhost:4001/api/auth/login', {
+      const res = await axios.post(`${process.env.REACT_APP_API_URL}/auth/login`, {
         email,
         password,
       });
