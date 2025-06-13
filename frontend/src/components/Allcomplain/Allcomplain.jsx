@@ -6,7 +6,7 @@ const Allcomplain = () => {
   const [complaints, setComplaints] = useState([]);
 
   useEffect(() => {
-    fetch('http://localhost:4001/api/complaints') // Fetch all complaints
+    fetch(`${process.env.REACT_APP_API_URL}/api/complaints/`) // Fetch all complaints
       .then((res) => res.json())
       .then((data) => {
         console.log(data);  // Check the structure of the data returned
@@ -18,7 +18,7 @@ const Allcomplain = () => {
   const handleDelete = async (id) => {
     if (window.confirm('Are you sure you want to delete this complaint?')) {
       try {
-        await fetch(`http://localhost:4001/api/complaints/${id}`, {
+        await fetch(`${process.env.REACT_APP_API_URL}/api/complaints/${id}`, {
           method: 'DELETE',
         });
         setComplaints(complaints.filter((c) => c._id !== id));
@@ -64,7 +64,7 @@ const Allcomplain = () => {
                     <td>{c.locationDetails}</td>
                     <td>
                       {c.picture ? (
-                        <a href={`http://localhost:4001/${c.picture}`} target="_blank" rel="noopener noreferrer">
+                        <a href={`${process.env.REACT_APP_API_URL}/${c.picture}`} target="_blank" rel="noopener noreferrer">
                           <i className="fa fa-eye" size={20}></i> View
                         </a>
                       ) : (
