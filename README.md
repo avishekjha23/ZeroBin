@@ -62,26 +62,29 @@ ZeroBin is a full-stack web application designed to streamline waste management 
 
 ## 📦 Installation Guide
 
+Make sure you have **Node.js**, **npm**, and **MongoDB** installed on your system.
+
 ```bash
 # 1. Clone the repository
 git clone https://github.com/your-username/zerobin.git
 cd zerobin
 
 # 2. Install backend dependencies
-cd server
+cd backend
 npm install
 
 # 3. Install frontend dependencies
-cd ../client
+cd ../frontend
 npm install
 
 # 4. Start the MongoDB server (in a new terminal)
+cd zerobin/backend
 mongod
 
-# 5. Start the backend server
-cd ../server
+# 5. Start the backend server (in a new terminal)
+cd zerobin/backend
 npm start
 
-# 6. Start the frontend React app
-cd ../client
+# 6. Start the frontend React app (in a new terminal)
+cd zerobin/frontend
 npm run dev
