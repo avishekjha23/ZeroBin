@@ -19,8 +19,8 @@ const Update = () => {
   const categories = ['Organic', 'Inorganic', 'Metallic', 'All']; // Available categories
 
   useEffect(() => {
-    fetch(`http://localhost:4001/api/complaints/${id}`)
-      .then((res) => res.json())
+    fetch(`${process.env.REACT_APP_API_URL}/complaints/${id}`)
+      .then((res) => res.json());
       .then((data) => {
         setFormData({
           ...data,
