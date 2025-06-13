@@ -21,7 +21,7 @@ import recycleImage2 from './assets/clients/recycling5.png';
 
 import image1 from "./assets/clients/images.png";
 import image2 from "./assets/clients/images (1).png";
-import image3 from "./assets/clients/Capture.PNG";
+import image3 from "./assets/clients/Capture.png";
 import image4 from "./assets/clients/download (2).jfif";
 import image5 from "./assets/clients/download (1).jfif";
 import image6 from "./assets/clients/download (3).jfif";
