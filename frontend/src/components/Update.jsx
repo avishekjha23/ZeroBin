@@ -26,7 +26,7 @@ const Update = () => {
           ...data,
           category: data.category || [], // Set previously selected categories
         });
-        if (data.picture) setPreview(`http://localhost:4001/${data.picture}`);
+        if (data.picture) setPreview(`${process.env.REACT_APP_API_URL}/${data.picture}`);
       })
       .catch((err) => console.error('Error fetching complaint:', err));
   }, [id]);
@@ -63,7 +63,7 @@ const Update = () => {
     });
 
     try {
-      const response = await fetch(`http://localhost:4001/api/complaints/${id}`, {
+      const response = await fetch(`${process.env.REACT_APP_API_URL}/complaints/${id}`, {
         method: 'PUT',
         body: updatedData,
       });
