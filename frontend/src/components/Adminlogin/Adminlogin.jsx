@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { useAuth } from '../../context/AuthContext';
 import axios from 'axios';
-import '../Login/Login.css';
+import '../Login/login.css';
 
 const AdminLogin = () => {
   const [email, setEmail] = useState('');
