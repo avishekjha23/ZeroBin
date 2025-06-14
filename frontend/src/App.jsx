@@ -25,6 +25,7 @@ import image3 from "./assets/clients/Capture.png";
 import image4 from "./assets/clients/download (2).jfif";
 import image5 from "./assets/clients/download (1).jfif";
 import image6 from "./assets/clients/download (3).jfif";
+import logo from './assets/trash-bin.png';
 
 
 import './App.css';
@@ -434,7 +435,7 @@ const Home = () => {
             <div className="col-lg-3 col-md-6 footer-contact">
               <h3>
                 <span className="logo-text">ZeroBin</span>
-                <img src="./assets/trash-bin.png" alt="Logo" style={{ width: 'auto', height: '40px', transform: 'translateY(-5px)'}} />
+                <img src={logo} alt="Logo" style={{ width: 'auto', height: '40px', transform: 'translateY(-5px)'}} />
               </h3>
               <p>
                 Kolkata, West Bengal<br />
