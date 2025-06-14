@@ -439,7 +439,7 @@ const Home = () => {
               <p>
                 Kolkata, West Bengal<br />
                 India<br /><br />
-                <strong>Phone:</strong> +91 99999999990000<br />
+                <strong>Phone:</strong> +91 9999999999<br />
                 <strong>Email:</strong> <a href="mailto:avishek23@gmail.com">avishek23@gmail.com</a>
               </p>
             </div>
