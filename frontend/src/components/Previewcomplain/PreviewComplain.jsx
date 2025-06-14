@@ -86,7 +86,7 @@ const PreviewComplain = () => {
                 <td>{c.locationDetails}</td>
                 <td>
                   {c.picture ? (
-                    <a href={`http://localhost:4001/${c.picture}`} target="_blank" rel="noopener noreferrer">
+                    <a href={`${process.env.REACT_APP_API_URL}/${c.picture}`} target="_blank" rel="noopener noreferrer">
                       <i className="fa fa-eye" size={20}></i> View
                     </a>
                   ) : (
