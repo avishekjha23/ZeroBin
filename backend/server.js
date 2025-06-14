@@ -14,7 +14,7 @@ connectDB();
 const app = express();
 
 app.get('/', (req, res) => {
-  res.send('API is running');
+  res.send({ message: 'Backend is running 🚀' });
 });
 
 // Middlewares
