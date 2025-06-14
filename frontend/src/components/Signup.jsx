@@ -27,7 +27,7 @@ const SignupForm = () => {
     }
 
     try {
-      const response = await axios.post(`http://localhost:4001/api/auth/signup`, {
+      const response = await axios.post(`${process.env.REACT_APP_API_URL}/api/auth/signup`, {
         fullName,
         email,
         password
