@@ -52,7 +52,7 @@ ZeroBin is a full-stack web application designed to streamline waste management 
 
 🌆 Design
 
-<a href="https://zerobin.netlify.app/" target="_blank"><img src="/frontend/src/assets/screenshots/1_HomePage.jpg" style="max-width: 100%;"></a>
+<a href="https://zerobin.netlify.app/" target="_blank" rel="noopener noreferrer"><img src="/frontend/src/assets/screenshots/1_HomePage.jpg" style="max-width: 100%;"></a>
 <a href="https://zerobin.netlify.app/" target="_blank"><img src="/frontend/src/assets/screenshots/2_SignUp.jpg" style="max-width: 100%;"></a>
 <a href="https://zerobin.netlify.app/" target="_blank"><img src="/frontend/src/assets/screenshots/3_UserLogin.jpg" style="max-width: 100%;"></a>
 <a href="https://zerobin.netlify.app/" target="_blank"><img src="/frontend/src/assets/screenshots/4_ComplainRegister.jpg" style="max-width: 100%;"></a>
