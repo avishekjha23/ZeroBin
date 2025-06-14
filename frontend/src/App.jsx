@@ -434,7 +434,7 @@ const Home = () => {
             <div className="col-lg-3 col-md-6 footer-contact">
               <h3>
                 <span className="logo-text">ZeroBin</span>
-                <img src="./src/assets/trash-bin.png" alt="Logo" style={{ width: 'auto', height: '40px', transform: 'translateY(-5px)'}} />
+                <img src="./assets/trash-bin.png" alt="Logo" style={{ width: 'auto', height: '40px', transform: 'translateY(-5px)'}} />
               </h3>
               <p>
                 Kolkata, West Bengal<br />
